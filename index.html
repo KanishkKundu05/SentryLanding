@@ -79,13 +79,14 @@
 
         /* Hero Container - Full image height */
         .hero-container {
-            min-height: 100vh;
+            height: calc(200vh - 800px);
             position: relative;
             background-image: url('herolanding.png');
             background-size: 120% auto;
             background-position: top center;
             background-repeat: no-repeat;
             background-attachment: scroll;
+            overflow: hidden;
         }
 
         /* Gradient overlay */
@@ -101,8 +102,7 @@
                 rgba(255, 255, 255, 0.05) 0%,
                 rgba(255, 255, 255, 0.02) 20%,
                 rgba(0, 0, 0, 0) 40%,
-                rgba(255, 255, 255, 0.4) 85%,
-                rgba(255, 255, 255, 1) 100%
+                rgba(0, 0, 0, 0) 100%
             );
             pointer-events: none;
             z-index: 1;
@@ -185,49 +185,6 @@
             color: #1f1f1f;
             box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
             z-index: 100;
-        }
-
-        /* Divider section */
-        .divider-section {
-            position: relative;
-            z-index: 10;
-            background: linear-gradient(180deg, 
-                rgba(0, 0, 0, 0) 0%,
-                rgba(255, 255, 255, 0.3) 30%,
-                rgba(255, 255, 255, 0.7) 60%,
-                rgba(255, 255, 255, 0.95) 85%,
-                #ffffff 100%
-            );
-            height: 300px;
-        }
-
-        .divider-line {
-            position: absolute;
-            top: 50px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 3px;
-            height: 150px;
-            background: linear-gradient(180deg, 
-                rgba(59, 130, 246, 0.2) 0%, 
-                rgba(59, 130, 246, 0.6) 30%,
-                #3b82f6 50%,
-                rgba(59, 130, 246, 0.6) 70%,
-                rgba(59, 130, 246, 0.2) 100%
-            );
-            box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
-        }
-        
-        .divider-line::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 40px;
-            height: 40px;
-            background: radial-gradient(circle, #3b82f6 0%, rgba(59, 130, 246, 0.4) 50%, transparent 70%);
-            border-radius: 50%;
         }
 
         /* Content section */
@@ -437,8 +394,6 @@
     </style>
 </head>
 <body>
-    <!-- Badge -->
-    <div class="badge">sentryai.dev</div>
 
     <!-- Hero Container with full image -->
     <div class="hero-container">
@@ -452,7 +407,7 @@
             <h1>AI that runs businesses autonomously</h1>
             <p>The General Intelligence Company is an applied AI lab working towards automating businesses full-stack with AI.</p>
             <a href="#" class="glass-card-link">
-                Get to know us
+                Get in touch
                 <svg viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
                 </svg>
@@ -461,31 +416,20 @@
     </div>
 
     <!-- Companies Logo Marquee Section -->
-    <div style="background: #ffffff; padding: 80px 0 60px; margin: 0;">
-        <h3 style="font-size: 16px; text-align: center; color: #94a3b8; padding-bottom: 56px; font-weight: 500; margin: 0;">
-            Trusted by leading brands, including —
+    <div style="background: #ffffff; padding: 40px 0 60px; margin: 0;">
+        <h3 style="font-size: 16px; text-align: center; color: #94a3b8; padding-bottom: 56px; font-weight: 500; margin: 0; font-family: 'Berkeley Mono', monospace;">
+            Loved by teams at leading enterprises
         </h3>
         <div style="overflow: hidden; width: 100%; position: relative; max-width: 1024px; margin: 0 auto; user-select: none;">
             <div style="position: absolute; left: 0; top: 0; height: 100%; width: 80px; z-index: 10; pointer-events: none; background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0));"></div>
             <div class="marquee-inner" style="display: flex; will-change: transform;">
-                <img style="margin: 0 44px; height: 32px; width: auto;" src="https://saasly.prebuiltui.com/assets/companies-logo/framer.svg" alt="Framer" />
-                <img style="margin: 0 44px; height: 32px; width: auto;" src="https://saasly.prebuiltui.com/assets/companies-logo/huawei.svg" alt="Huawei" />
-                <img style="margin: 0 44px; height: 32px; width: auto;" src="https://saasly.prebuiltui.com/assets/companies-logo/instagram.svg" alt="Instagram" />
-                <img style="margin: 0 44px; height: 32px; width: auto;" src="https://saasly.prebuiltui.com/assets/companies-logo/microsoft.svg" alt="Microsoft" />
-                <img style="margin: 0 44px; height: 32px; width: auto;" src="https://saasly.prebuiltui.com/assets/companies-logo/walmart.svg" alt="Walmart" />
-                <img style="margin: 0 44px; height: 32px; width: auto;" src="https://saasly.prebuiltui.com/assets/companies-logo/framer.svg" alt="Framer" />
-                <img style="margin: 0 44px; height: 32px; width: auto;" src="https://saasly.prebuiltui.com/assets/companies-logo/huawei.svg" alt="Huawei" />
-                <img style="margin: 0 44px; height: 32px; width: auto;" src="https://saasly.prebuiltui.com/assets/companies-logo/instagram.svg" alt="Instagram" />
-                <img style="margin: 0 44px; height: 32px; width: auto;" src="https://saasly.prebuiltui.com/assets/companies-logo/microsoft.svg" alt="Microsoft" />
-                <img style="margin: 0 44px; height: 32px; width: auto;" src="https://saasly.prebuiltui.com/assets/companies-logo/walmart.svg" alt="Walmart" />
+                <img style="margin: 0 44px; height: 32px; width: auto;" src="https://www.goindigo.in/content/dam/s6web/in/en/assets/logo/IndiGo_logo_2x.png" alt="IndiGo" />
+                <img style="margin: 0 44px; height: 32px; width: auto;" src="AI_Logo_Red_New.svg" alt="Air India" />
+                <img style="margin: 0 44px; height: 32px; width: auto; transform: scale(1);" src="https://www.cannonschool.org/uploaded/themes/default_20/images/logo-cannon-red.jpg" alt="Cannon School" />
+                <img style="margin: 0 44px; height: 32px; width: auto;" src="https://cdn.prod.website-files.com/684668352eccd47cd037c637/6846a01b39ead81d4f07111b_brand-logo.svg" alt="Accent" />
             </div>
             <div style="position: absolute; right: 0; top: 0; height: 100%; width: 160px; z-index: 10; pointer-events: none; background: linear-gradient(to left, rgba(255,255,255,1), rgba(255,255,255,0));"></div>
         </div>
-    </div>
-
-    <!-- Divider Section -->
-    <div class="divider-section">
-        <div class="divider-line"></div>
     </div>
 
     <!-- Content Section -->
@@ -532,7 +476,7 @@
                 const heroHeight = heroContainer.offsetHeight;
                 
                 // Margin from the bottom of the visible image (adjust this value as needed)
-                const bottomMargin = 1280;
+                const bottomMargin = 20;
                 
                 // Get the glass card dimensions
                 const cardHeight = glassCard.offsetHeight;
