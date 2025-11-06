@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SentryAI - AI-Powered Monitoring</title>
     <style>
         /* Berkeley Mono Font Faces */
         @font-face {
@@ -49,7 +48,7 @@
         /* Hero Text */
         .hero-text {
             position: absolute;
-            top: 80px;
+            top: 140px;
             left: 50%;
             transform: translateX(-50%);
             text-align: center;
@@ -111,11 +110,11 @@
         /* Glassmorphism Card */
         .glass-card {
             position: fixed;
-            top: 45vh;
-            left: 5%;
+            top: 55vh;
+            left: 8%;
             z-index: 10;
             max-width: 495px;
-            width: 36%;
+            width: 46%;
             min-width: 420px;
             padding: 36px 43px;
             background: rgba(255, 255, 255, 0.08);
@@ -185,6 +184,107 @@
             color: #1f1f1f;
             box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
             z-index: 100;
+        }
+
+        /* Glass Navigation Bar */
+        .glass-nav {
+            position: fixed;
+            top: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            padding: 10px 24px;
+            max-width: 600px;
+            width: auto;
+        }
+
+        .nav-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #ffffff;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            font-family: 'Berkeley Mono', monospace;
+        }
+
+        .nav-logo-icon {
+            font-size: 16px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s ease;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        .nav-links a:hover {
+            color: #ffffff;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .nav-button {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(20, 20, 20, 0.85);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            white-space: nowrap;
+        }
+
+        .nav-button:hover {
+            background: rgba(40, 40, 40, 0.9);
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .nav-badge {
+            background: rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+            padding: 1px 6px;
+            border-radius: 8px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+
+        .nav-time-icon {
+            width: 14px;
+            height: 14px;
         }
 
         /* Content section */
@@ -263,33 +363,31 @@
             margin: 0;
         }
 
-        /* Marquee Animation */
-        .marquee-inner {
-            animation: marqueeScroll 15s linear infinite;
-        }
-
-        @keyframes marqueeScroll {
-            0% {
-                transform: translateX(0%);
-            }
-            100% {
-                transform: translateX(-50%);
-            }
-        }
-
         /* Responsive Design */
         @media (max-width: 1200px) {
             .glass-card {
-                width: 40%;
+                width: 50%;
                 min-width: 380px;
             }
         }
 
         @media (max-width: 900px) {
             .glass-card {
-                width: 50%;
+                width: 60%;
                 min-width: 350px;
-                left: 3%;
+                left: 5%;
+            }
+
+            .nav-content {
+                gap: 20px;
+            }
+
+            .nav-links {
+                gap: 16px;
+            }
+
+            .nav-time {
+                display: none;
             }
         }
 
@@ -300,7 +398,7 @@
             }
 
             .hero-text {
-                top: 60px;
+                top: 120px;
             }
 
             .hero-text h1 {
@@ -316,7 +414,7 @@
                 width: 85%;
                 min-width: unset;
                 left: 50%;
-                top: 35vh;
+                top: 45vh;
                 transform: translateX(-50%);
                 max-width: 450px;
             }
@@ -354,11 +452,37 @@
                 grid-template-columns: 1fr;
                 gap: 24px;
             }
+
+            .glass-nav {
+                padding: 8px 16px;
+                top: 16px;
+            }
+
+            .nav-content {
+                gap: 16px;
+            }
+
+            .nav-logo {
+                font-size: 14px;
+            }
+
+            .nav-links {
+                gap: 12px;
+            }
+
+            .nav-links a {
+                font-size: 13px;
+            }
+
+            .nav-button {
+                padding: 5px 10px;
+                font-size: 12px;
+            }
         }
 
         @media (max-width: 480px) {
             .hero-text {
-                top: 40px;
+                top: 100px;
                 padding: 0 20px;
             }
 
@@ -390,22 +514,77 @@
             .content-section h2 {
                 font-size: 32px;
             }
+
+            .glass-nav {
+                padding: 8px 12px;
+                top: 12px;
+            }
+
+            .nav-content {
+                gap: 12px;
+            }
+
+            .nav-logo span {
+                display: none;
+            }
+
+            .nav-logo-icon {
+                font-size: 18px;
+            }
+
+            .nav-links {
+                gap: 10px;
+            }
+
+            .nav-links a {
+                font-size: 12px;
+            }
+
+            .nav-button {
+                font-size: 11px;
+                padding: 4px 8px;
+            }
+
+            .nav-badge {
+                padding: 1px 5px;
+                font-size: 10px;
+            }
         }
     </style>
 </head>
 <body>
+
+    <!-- Glass Navigation Bar -->
+    <nav class="glass-nav">
+        <div class="nav-content">
+            
+            <div class="nav-links">
+                <a href="#about" style="font-family: 'Berkeley Mono', monospace;">About</a>
+                <a href="#casestudies" style="font-family: 'Berkeley Mono', monospace;">Case Studies</a>
+                <a href="#blog" style="font-family: 'Berkeley Mono', monospace;">Blog</a>
+            </div>
+            
+            <div class="nav-right">
+                <a href="#cofounder" class="nav-button" style="font-family: 'Berkeley Mono', monospace;">
+                    Get Started
+                </a>
+    
+                </div>
+            </div>
+        </div>
+    </nav>
 
     <!-- Hero Container with full image -->
     <div class="hero-container">
         <!-- Hero Text -->
         <div class="hero-text">
             <h1>Sentry</h1>
-            <p>enterprise agents that <span class="italic-bold">work</span>.</p>
+            <p>enterprise agents that <span class="italic-bold">just work</span>.</p>
         </div>
 
         <div class="glass-card" id="glassCard">
-            <h1>AI that runs businesses autonomously</h1>
-            <p>The General Intelligence Company is an applied AI lab working towards automating businesses full-stack with AI.</p>
+            <h1 style="font-family: 'Berkeley Mono', monospace; font-size: 33px;">AI that transforms internal operations</h1>
+            <p style="font-family: 'Berkeley Mono', monospace; font-size: 15px;">Acclerate your business with AI-powered agents that <span style="font-family: 'Berkeley Mono', monospace; font-weight:700;font-style:italic;">scale</span> with your business.</p>
             <a href="#" class="glass-card-link">
                 Get in touch
                 <svg viewBox="0 0 20 20" fill="currentColor">
@@ -415,54 +594,52 @@
         </div>
     </div>
 
-    <!-- Companies Logo Marquee Section -->
+    <!-- Divider after hero image -->
+    <div style="width: 100%; height: 6px; background-color: #344;"></div>
+    <div style="width: 100%; height: 2px; background-color: #ffffff;"></div>
+    <div style="width: 100%; height: 6px; background-color: #576A6A;"></div>
+    <div style="width: 100%; height: 2px; background-color: #ffffff;"></div>
+    <div style="width: 100%; height: 6px; background-color: #728383;"></div>
+    <div style="width: 100%; height: 2px; background-color: #ffffff;"></div>
+    <div style="width: 100%; height: 6px; background-color: #A5AFAF;"></div>
+    <div style="width: 100%; height: 2px; background-color: #ffffff;"></div>
+    <div style="width: 100%; height: 6px; background-color: #CFD3CF;"></div>
+
+    <!-- Companies Logo Section -->
     <div style="background: #ffffff; padding: 40px 0 60px; margin: 0;">
         <h3 style="font-size: 16px; text-align: center; color: #94a3b8; padding-bottom: 56px; font-weight: 500; margin: 0; font-family: 'Berkeley Mono', monospace;">
-            Loved by teams at leading enterprises
+            Trusted by leading companies
         </h3>
-        <div style="overflow: hidden; width: 100%; position: relative; max-width: 1024px; margin: 0 auto; user-select: none;">
-            <div style="position: absolute; left: 0; top: 0; height: 100%; width: 80px; z-index: 10; pointer-events: none; background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0));"></div>
-            <div class="marquee-inner" style="display: flex; will-change: transform;">
-                <img style="margin: 0 44px; height: 32px; width: auto;" src="https://www.goindigo.in/content/dam/s6web/in/en/assets/logo/IndiGo_logo_2x.png" alt="IndiGo" />
-                <img style="margin: 0 44px; height: 32px; width: auto;" src="AI_Logo_Red_New.svg" alt="Air India" />
-                <img style="margin: 0 44px; height: 32px; width: auto; transform: scale(1);" src="https://www.cannonschool.org/uploaded/themes/default_20/images/logo-cannon-red.jpg" alt="Cannon School" />
-                <img style="margin: 0 44px; height: 32px; width: auto;" src="https://cdn.prod.website-files.com/684668352eccd47cd037c637/6846a01b39ead81d4f07111b_brand-logo.svg" alt="Accent" />
+        <div style="width: 100%; max-width: 800px; margin: 0 auto; user-select: none;">
+            <div style="display: flex; align-items: center; justify-content: space-around; gap: 40px; flex-wrap: wrap; padding: 0 20px;">
+                <img style="height: 32px; width: auto;" src="https://www.goindigo.in/content/dam/s6web/in/en/assets/logo/IndiGo_logo_2x.png" alt="IndiGo" />
+                <img style="height: 32px; width: auto;" src="AI_Logo_Red_New.svg" alt="Air India" />
+                <img style="height: 32px; width: auto;" src="https://www.cannonschool.org/uploaded/themes/default_20/images/logo-cannon-red.jpg" alt="Cannon School" />
+                <img style="height: 32px; width: auto;" src="https://cdn.prod.website-files.com/684668352eccd47cd037c637/6846a01b39ead81d4f07111b_brand-logo.svg" alt="Accent" />
             </div>
-            <div style="position: absolute; right: 0; top: 0; height: 100%; width: 160px; z-index: 10; pointer-events: none; background: linear-gradient(to left, rgba(255,255,255,1), rgba(255,255,255,0));"></div>
         </div>
     </div>
 
-    <!-- Content Section -->
-    <section class="content-section">
-        <div class="content-wrapper">
-            <h2>AI-Powered Intelligence</h2>
-            <p>
-                SentryAI combines cutting-edge artificial intelligence with real-time monitoring to deliver insights that matter. Our platform adapts to your needs, learning from patterns and predicting issues before they become problems.
-            </p>
-
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🔍</div>
-                    <h3>Real-Time Monitoring</h3>
-                    <p>Track your systems 24/7 with intelligent alerts that prioritize what matters most.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🤖</div>
-                    <h3>AI-Driven Insights</h3>
-                    <p>Machine learning algorithms analyze patterns and provide actionable recommendations.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Instant Response</h3>
-                    <p>Automated workflows trigger immediate responses to critical events.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <script>
+        // Update navigation time display
+        function updateTime() {
+            const now = new Date();
+            const hours = now.getHours();
+            const minutes = now.getMinutes();
+            const ampm = hours >= 12 ? 'PM' : 'AM';
+            const displayHours = hours % 12 || 12;
+            const displayMinutes = minutes < 10 ? '0' + minutes : minutes;
+            
+            const timeElement = document.getElementById('navTime');
+            if (timeElement) {
+                timeElement.textContent = `${displayHours}:${displayMinutes} ${ampm}`;
+            }
+        }
+        
+        // Update time immediately and then every minute
+        updateTime();
+        setInterval(updateTime, 60000);
+        
         // Scroll effect - glass card stays fixed until it reaches end of background image
         const glassCard = document.getElementById('glassCard');
         const heroContainer = document.querySelector('.hero-container');
@@ -476,13 +653,13 @@
                 const heroHeight = heroContainer.offsetHeight;
                 
                 // Margin from the bottom of the visible image (adjust this value as needed)
-                const bottomMargin = 20;
+                const bottomMargin = 10;
                 
                 // Get the glass card dimensions
                 const cardHeight = glassCard.offsetHeight;
                 
-                // Calculate the initial top position in pixels (45vh = 45% of viewport height)
-                const cardInitialTopPx = windowHeight * 0.45;
+                // Calculate the initial top position in pixels (55vh)
+                const cardInitialTopPx = windowHeight * 0.55;
                 
                 // Calculate when the bottom of the card (in viewport) would reach the threshold
                 // The threshold is the end of the hero section minus the margin
@@ -495,15 +672,15 @@
                 if (scrollY < stopScrollThreshold) {
                     // Keep the card fixed in its original position (no transform)
                     glassCard.style.position = 'fixed';
-                    glassCard.style.top = '45vh';
-                    glassCard.style.left = '5%';
+                    glassCard.style.top = '55vh';
+                    glassCard.style.left = '8%';
                     glassCard.style.transform = 'none';
                 } else {
                     // Switch to absolute positioning so it stops scrolling with the viewport
                     // Position it relative to the hero container
                     glassCard.style.position = 'absolute';
                     glassCard.style.top = (imageEndPoint - cardHeight) + 'px';
-                    glassCard.style.left = '5%';
+                    glassCard.style.left = '8%';
                     glassCard.style.transform = 'none';
                 }
             }
