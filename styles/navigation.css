@@ -99,3 +99,10 @@
     height: 14px;
 }
 
+/* Scrolled state - inverted colors for visibility on white background */
+.glass-nav.scrolled {
+    background: rgba(20, 20, 20, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background 0.3s ease, border 0.3s ease;
+}
+

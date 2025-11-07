@@ -143,10 +143,13 @@
 
         Cal("init", "atlasagents", {origin:"https://cal.com"});
 
+        // Detect mobile device
+        const isMobile = window.innerWidth <= 768;
+
         Cal("inline", {
             elementOrSelector:"#cal-booking-container",
             calLink: "sentryorg/15min",
-            layout: "month_view",
+            layout: isMobile ? "column_view" : "month_view",
             config: {
                 "theme": "light"
             }
@@ -159,7 +162,7 @@
                 }
             },
             "hideEventTypeDetails": false,
-            "layout": "month_view"
+            "layout": isMobile ? "column_view" : "month_view"
         });
     </script>
 
