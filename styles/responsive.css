@@ -1,0 +1,216 @@
+/* Responsive Design */
+@media (max-width: 1400px) {
+    .hero-container {
+        background-size: cover;
+        background-position: center center;
+    }
+}
+
+@media (max-width: 1200px) {
+    .hero-container {
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .glass-card {
+        width: 50%;
+        min-width: 380px;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero-container {
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .glass-card {
+        width: 60%;
+        min-width: 350px;
+        left: 5%;
+    }
+
+    .nav-content {
+        gap: 20px;
+    }
+
+    .nav-links {
+        gap: 16px;
+    }
+
+    .nav-time {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-container {
+        background-image: url('../hero-mobile.png');
+        background-size: cover;
+        background-position: 60% center;
+    }
+
+    .hero-text {
+        top: 120px;
+    }
+
+    .hero-text h1 {
+        font-size: 48px;
+    }
+
+    .hero-text p {
+        font-size: 20px;
+    }
+
+    .glass-card {
+        padding: 28px 32px;
+        width: 85%;
+        min-width: unset;
+        left: 50%;
+        top: 45vh;
+        transform: translateX(-50%);
+        max-width: 450px;
+    }
+
+    .glass-card h1 {
+        font-size: 35px;
+    }
+
+    .glass-card p {
+        font-size: 14px;
+    }
+
+    .glass-card-link {
+        font-size: 14px;
+    }
+
+    .content-section {
+        padding: 80px 28px;
+    }
+
+    .content-section h2 {
+        font-size: 36px;
+    }
+
+    .content-section p {
+        font-size: 18px;
+    }
+
+    .badge {
+        bottom: 24px;
+        left: 24px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .glass-nav {
+        padding: 8px 16px;
+        top: 16px;
+    }
+
+    .nav-content {
+        gap: 16px;
+    }
+
+    .nav-logo {
+        font-size: 14px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .nav-links a:last-child {
+        display: none;
+    }
+
+    .nav-button {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-container {
+        background-image: url('../hero-mobile.png');
+        background-size: cover;
+        background-position: 65% center;
+    }
+
+    .hero-text {
+        top: 100px;
+        padding: 0 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 45px;
+    }
+
+    .hero-text p {
+        font-size: 18px;
+    }
+
+    .glass-card {
+        padding: 25px 22px;
+        width: 90%;
+    }
+
+    .glass-card h1 {
+        font-size: 31px;
+    }
+
+    .glass-card p {
+        font-size: 13px;
+    }
+
+    .glass-card-link {
+        font-size: 13px;
+    }
+
+    .content-section h2 {
+        font-size: 32px;
+    }
+
+    .glass-nav {
+        padding: 8px 12px;
+        top: 12px;
+    }
+
+    .nav-content {
+        gap: 12px;
+    }
+
+    .nav-logo span {
+        display: none;
+    }
+
+    .nav-logo-icon {
+        font-size: 18px;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .nav-button {
+        font-size: 11px;
+        padding: 4px 8px;
+    }
+
+    .nav-badge {
+        padding: 1px 5px;
+        font-size: 10px;
+    }
+}
+

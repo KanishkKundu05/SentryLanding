@@ -1,0 +1,127 @@
+/* Hero Text */
+.hero-text {
+    position: absolute;
+    top: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 20;
+    font-family: 'Berkeley Mono', monospace;
+}
+
+.hero-text h1 {
+    font-size: 72px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+}
+
+.hero-text p {
+    font-size: 28px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.95);
+    letter-spacing: -0.01em;
+}
+
+.hero-text .italic-bold {
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* Hero Container - Full image height */
+.hero-container {
+    height: calc(200vh - 800px);
+    position: relative;
+    background-color: #000;
+    background-image: url('../herolanding.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    overflow: hidden;
+}
+
+/* Gradient overlay */
+.hero-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.05) 0%,
+        rgba(255, 255, 255, 0.02) 20%,
+        rgba(0, 0, 0, 0) 40%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Glassmorphism Card */
+.glass-card {
+    position: fixed;
+    top: 85vh;
+    left: 8%;
+    z-index: 10;
+    max-width: 495px;
+    width: 46%;
+    min-width: 420px;
+    padding: 36px 43px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    will-change: transform;
+}
+
+.glass-card h1 {
+    font-size: 41px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #ffffff;
+    margin-bottom: 18px;
+    font-family: 'Georgia', serif;
+}
+
+.glass-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 25px;
+    font-weight: 400;
+}
+
+.glass-card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    padding-bottom: 4px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
+}
+
+.glass-card-link:hover {
+    border-bottom-color: #ffffff;
+    gap: 12px;
+}
+
+.glass-card-link svg {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+.glass-card-link:hover svg {
+    transform: translateX(4px);
+}
+
