@@ -64,3 +64,27 @@ window.addEventListener('load', updateScrollElements);
 // Initial call
 updateScrollElements();
 
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        
+        // Only handle links that point to an element (not just "#")
+        if (href && href.length > 1) {
+            const targetElement = document.querySelector(href);
+            
+            if (targetElement) {
+                e.preventDefault();
+                
+                // Calculate offset for smooth scroll
+                const offsetTop = targetElement.offsetTop;
+                
+                window.scrollTo({
+                    top: offsetTop - 100, // 100px offset from top for better visibility
+                    behavior: 'smooth'
+                });
+            }
+        }
+    });
+});
+

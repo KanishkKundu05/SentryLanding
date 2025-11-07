@@ -1,3 +1,8 @@
+/* Hide duplicate brands on desktop */
+.brands-duplicate {
+    display: none !important;
+}
+
 /* Responsive Design */
 @media (max-width: 1400px) {
     .hero-container {
@@ -47,7 +52,7 @@
     .hero-container {
         background-image: url('../hero-mobile.png');
         background-size: cover;
-        background-position: 60% center;
+        background-position: 70% center;
     }
 
     .hero-text {
@@ -135,13 +140,61 @@
         padding: 5px 10px;
         font-size: 12px;
     }
+
+    /* Mobile Carousel for Brands */
+    .brands-section {
+        padding-bottom: 30px !important;
+    }
+
+    .brands-container {
+        overflow: hidden !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+
+    .brands-wrapper {
+        flex-wrap: nowrap !important;
+        gap: 60px !important;
+        padding: 0 !important;
+        justify-content: flex-start !important;
+        animation: scroll-brands 20s linear infinite;
+        will-change: transform;
+    }
+
+    .brands-duplicate {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        gap: 60px !important;
+        padding: 0 !important;
+        justify-content: flex-start !important;
+    }
+
+    .brands-container {
+        display: flex !important;
+        width: 100% !important;
+    }
+
+    .brand-logo {
+        height: 24px !important;
+        flex-shrink: 0;
+        width: auto !important;
+    }
+
+    @keyframes scroll-brands {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
 }
 
 @media (max-width: 480px) {
     .hero-container {
         background-image: url('../hero-mobile.png');
         background-size: cover;
-        background-position: 65% center;
+        background-position: 75% center;
     }
 
     .hero-text {
@@ -211,6 +264,94 @@
     .nav-badge {
         padding: 1px 5px;
         font-size: 10px;
+    }
+
+    #book-demo h2 {
+        font-size: 32px !important;
+    }
+
+    #book-demo p {
+        font-size: 16px !important;
+    }
+}
+
+/* Book Demo Section Responsive Styles */
+@media (max-width: 768px) {
+    #book-demo {
+        padding-top: 20px 16px !important;
+    }
+
+    #book-demo h2 {
+        font-size: 36px !important;
+        line-height: 1.2;
+    }
+
+    #book-demo p {
+        font-size: 16px !important;
+        margin-bottom: 32px !important;
+    }
+
+    #cal-booking-container {
+        min-height: 700px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    #book-demo {
+        padding-top: 20px !important;
+        padding-bottom: 32px !important;
+    }
+
+    #book-demo h2 {
+        font-size: 28px !important;
+    }
+
+    #book-demo p {
+        font-size: 14px !important;
+        padding: 0 8px;
+    }
+
+    #cal-booking-container {
+        min-height: 650px !important;
+    }
+
+    /* Mobile Carousel for Brands - Smaller screens */
+    .brands-section {
+        padding-bottom: 30px !important;
+    }
+
+    .brands-container {
+        overflow: hidden !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+
+    .brands-wrapper {
+        flex-wrap: nowrap !important;
+        gap: 50px !important;
+        padding: 0 !important;
+        justify-content: flex-start !important;
+        animation: scroll-brands 20s linear infinite;
+        will-change: transform;
+    }
+
+    .brands-duplicate {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        gap: 50px !important;
+        padding: 0 !important;
+        justify-content: flex-start !important;
+    }
+
+    .brands-container {
+        display: flex !important;
+        width: 100% !important;
+    }
+
+    .brand-logo {
+        height: 24px !important;
+        flex-shrink: 0;
+        width: auto !important;
     }
 }
 
