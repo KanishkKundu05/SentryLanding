@@ -45,7 +45,7 @@
         <div class="glass-card" id="glassCard">
             <h1 style="font-family: 'Berkeley Mono', monospace; font-size: 33px;">AI agents for enterprise support</h1>
             <p style="font-family: 'Berkeley Mono', monospace; font-size: 15px;">Sentry is an applied AI lab transforming internal operations with autonomous agents.</p>
-            <a href="#book-demo" class="glass-card-link">
+            <a href="mailto:hello@sentry.so" class="glass-card-link">
                 Get in touch
                 <svg viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -202,80 +202,6 @@
         </div>
     </section>
 
-    <!-- Book a Demo Section -->
-    <section id="book-demo" style="width: 100%; background: #ffffff; padding: 60px 20px; display: flex; flex-direction: column; align-items: center;">
-        <div style="text-align: center; background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 9999px; padding: 4px 16px; font-size: 14px; font-weight: 500; color: rgb(220, 38, 38); margin-bottom: 24px; font-family: 'Berkeley Mono', monospace;">
-            Book a discovery call
-        </div>
-        <p style="font-family: 'Berkeley Mono', monospace; font-size: 18px; color: #64748b; text-align: center; max-width: 700px; margin-bottom: 0; line-height: 1.6;">
-            Ready to see Sentry in action?
-        </p>
-        <div style="width: 100%; max-width: 1000px; margin-top: -90px;">
-            <div 
-                id="cal-booking-container"
-                style="width: 100%; min-height: 800px;"
-            ></div>
-        </div>
-    </section>
-
-    <!-- Cal.com Embed Script -->
-    <script>
-        (function (C, A, L) { 
-            let p = function (a, ar) { 
-                a.q.push(ar); 
-            }; 
-            let d = C.document; 
-            C.Cal = C.Cal || function () { 
-                let cal = C.Cal; 
-                let ar = arguments; 
-                if (!cal.loaded) { 
-                    cal.ns = {}; 
-                    cal.q = cal.q || []; 
-                    d.head.appendChild(d.createElement("script")).src = A; 
-                    cal.loaded = true; 
-                } 
-                if (ar[0] === L) { 
-                    const api = function () { 
-                        p(api, arguments); 
-                    }; 
-                    const namespace = ar[1]; 
-                    api.q = api.q || []; 
-                    if (typeof namespace === "string") { 
-                        cal.ns[namespace] = cal.ns[namespace] || api; 
-                        p(cal.ns[namespace], ar); 
-                        return; 
-                    } 
-                    p(cal, ar); 
-                    return; 
-                } 
-                p(cal, ar); 
-            }; 
-        })(window, "https://app.cal.com/embed/embed.js", "init");
-
-        Cal("init", "atlasagents", {origin:"https://cal.com"});
-
-        // Detect mobile device
-        const isMobile = window.innerWidth <= 768;
-
-        Cal("inline", {
-            elementOrSelector:"#cal-booking-container",
-            calLink: "sentryorg/15min",
-            layout: isMobile ? "column_view" : "month_view",
-            config: {
-                "theme": "light"
-            }
-        });
-
-        Cal("ui", {
-            "styles": {
-                "branding": {
-                    "brandColor": "#000000"
-                }
-            },
-            "hideEventTypeDetails": false,
-            "layout": isMobile ? "column_view" : "month_view"
-        });
-    </script>
 
     <!-- JavaScript -->
     <script src="scripts/scroll.js"></script>

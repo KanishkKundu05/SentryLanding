@@ -353,14 +353,6 @@
         font-size: 10px;
     }
 
-    #book-demo h2 {
-        font-size: 32px !important;
-    }
-
-    #book-demo p {
-        font-size: 16px !important;
-    }
-
     /* Built to handle complexity heading - even smaller on small mobile */
     div[style*="background: #ffffff"] h2[style*="font-size: 48px"] {
         font-size: 22px !important;
@@ -454,54 +446,8 @@
     }
 }
 
-/* Book Demo Section Responsive Styles */
-@media (max-width: 768px) {
-    #book-demo {
-        padding: 40px 16px !important;
-    }
-
-    #book-demo h2 {
-        font-size: 36px !important;
-        line-height: 1.2;
-    }
-
-    #book-demo p {
-        font-size: 16px !important;
-        margin-bottom: 16px !important;
-    }
-
-    #book-demo > div:last-child {
-        margin-top: 0px !important;
-    }
-
-    #cal-booking-container {
-        min-height: 700px !important;
-    }
-}
-
+/* Mobile Static Brands - Smaller screens - Show only 3 logos */
 @media (max-width: 480px) {
-    #book-demo {
-        padding: 30px 16px !important;
-    }
-
-    #book-demo h2 {
-        font-size: 28px !important;
-    }
-
-    #book-demo p {
-        font-size: 14px !important;
-        padding: 0 8px;
-        margin-bottom: 12px !important;
-    }
-
-    #book-demo > div:last-child {
-        margin-top: 0px !important;
-    }
-
-    #cal-booking-container {
-        min-height: 650px !important;
-    }
-
     /* Mobile Static Brands - Smaller screens - Show only 3 logos */
     .brands-section {
         padding-bottom: 30px !important;
