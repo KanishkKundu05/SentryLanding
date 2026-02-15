@@ -181,7 +181,7 @@
         display: none !important;
     }
 
-    /* Show only IndiGo, Air India, and Cannon */
+    /* Show only IndiGo and Cannon */
     .brand-logo {
         height: 32px !important;
         flex-shrink: 0;
@@ -482,7 +482,7 @@
         display: none !important;
     }
 
-    /* Show only IndiGo, Air India, and Cannon */
+    /* Show only IndiGo and Cannon */
     .brand-logo {
         height: 28px !important;
         flex-shrink: 0;
