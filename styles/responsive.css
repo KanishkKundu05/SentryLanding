@@ -35,17 +35,6 @@
         left: 5%;
     }
 
-    .nav-content {
-        gap: 20px;
-    }
-
-    .nav-links {
-        gap: 16px;
-    }
-
-    .nav-time {
-        display: none;
-    }
 }
 
 @media (max-width: 768px) {
@@ -110,36 +99,6 @@
     .features-grid {
         grid-template-columns: 1fr;
         gap: 24px;
-    }
-
-    .glass-nav {
-        padding: 8px 16px;
-        top: 16px;
-    }
-
-    .nav-content {
-        gap: 16px;
-    }
-
-    .nav-logo {
-        font-size: 14px;
-    }
-
-    .nav-links {
-        gap: 12px;
-    }
-
-    .nav-links a {
-        font-size: 13px;
-    }
-
-    .nav-links a:last-child {
-        display: none;
-    }
-
-    .nav-button {
-        padding: 5px 10px;
-        font-size: 12px;
     }
 
     /* Built to handle complexity heading */
@@ -318,41 +277,6 @@
         font-size: 32px;
     }
 
-    .glass-nav {
-        padding: 8px 12px;
-        top: 12px;
-    }
-
-    .nav-content {
-        gap: 12px;
-    }
-
-    .nav-logo span {
-        display: none;
-    }
-
-    .nav-logo-icon {
-        font-size: 18px;
-    }
-
-    .nav-links {
-        gap: 10px;
-    }
-
-    .nav-links a {
-        font-size: 12px;
-    }
-
-    .nav-button {
-        font-size: 11px;
-        padding: 4px 8px;
-    }
-
-    .nav-badge {
-        padding: 1px 5px;
-        font-size: 10px;
-    }
-
     /* Built to handle complexity heading - even smaller on small mobile */
     div[style*="background: #ffffff"] h2[style*="font-size: 48px"] {
         font-size: 22px !important;
@@ -496,4 +420,3 @@
         display: none !important;
     }
 }
-

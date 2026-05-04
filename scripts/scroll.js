@@ -1,22 +1,10 @@
 // Scroll effect - glass card stays fixed until it reaches end of background image
 const glassCard = document.getElementById('glassCard');
 const heroContainer = document.querySelector('.hero-container');
-const glassNav = document.querySelector('.glass-nav');
 
 function updateScrollElements() {
     const scrollY = window.scrollY;
     const windowHeight = window.innerHeight;
-    
-    // Toggle nav bar style based on scroll position
-    if (glassNav && heroContainer) {
-        const heroHeight = heroContainer.offsetHeight;
-        // Add scrolled class when we've scrolled past the hero section
-        if (scrollY > heroHeight) {
-            glassNav.classList.add('scrolled');
-        } else {
-            glassNav.classList.remove('scrolled');
-        }
-    }
     
     if (glassCard) {
         // Get hero container dimensions
@@ -99,4 +87,3 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
-
