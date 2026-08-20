@@ -1,12 +1,12 @@
 {
   "rewrites": [
     {
-      "source": "/warpspeed",
-      "destination": "https://india-steel-alpha.vercel.app/warpspeed"
+      "source": "/indiav1",
+      "destination": "https://india-steel-alpha.vercel.app/indiav1"
     },
     {
-      "source": "/warpspeed/:path*",
-      "destination": "https://india-steel-alpha.vercel.app/warpspeed/:path*"
+      "source": "/indiav1/:path*",
+      "destination": "https://india-steel-alpha.vercel.app/indiav1/:path*"
     }
   ]
 }
